@@ -1,0 +1,12 @@
+<h2>Lista de dados</h2>
+<ul class="lista-produtos">
+    <li *ngFor="let cleular of celulares">
+        <p>{{cleular.name}}</p>
+        <p>{{cleular.description}}</p>
+        <span
+         [ngClass]="cleular.soldOff ? 'esgotado' : ''"
+        >
+            {{cleular.soldOff ? 'esgotado' : 'disponivel'}}
+        </span>
+    </li>
+</ul>
